@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Михаил Лобоцкий — Cloud.ru</title>
+<meta name="description" content="Михаил Лобоцкий — ИО генерального директора Cloud.ru, лидер российского облачного и AI-рынка">
+<meta property="og:title" content="Михаил Лобоцкий — Cloud.ru">
+<meta property="og:description" content="ИО генерального директора Cloud.ru. Облака, AI, стратегия, фридайвинг.">
+
+<!-- Fonts -->
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=cabinet-grotesk@400,500,700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════ TOKENS ═══════════════════ */
+:root {
+  /* Type scale */
+  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+  --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+  --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+  --text-hero: clamp(3rem,     0.5rem  + 7vw,    6rem);
+
+  /* Spacing */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Fonts */
+  --font-display: 'Clash Display', 'Trebuchet MS', sans-serif;
+  --font-body: 'Cabinet Grotesk', 'Helvetica Neue', sans-serif;
+
+  /* Radius */
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ═══════════════════ BRIGHT CREATIVE PALETTE ═══════════════════ */
+:root, [data-theme="light"] {
+  --color-bg: #F5F0EB;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #FBF8F5;
+  --color-border: #E0D8CF;
+  --color-text: #1A1714;
+  --color-text-muted: #6B6560;
+  --color-text-faint: #A9A49E;
+  --color-primary: #E84E1B;
+  --color-primary-hover: #C93D12;
+  --color-accent-violet: #6C3EF0;
+  --color-accent-cyan: #0BA5A5;
+  --color-accent-gold: #D4930A;
+  --gradient-hero: linear-gradient(135deg, #E84E1B 0%, #6C3EF0 50%, #0BA5A5 100%);
+  --gradient-hero-soft: linear-gradient(135deg, rgba(232,78,27,0.08) 0%, rgba(108,62,240,0.08) 50%, rgba(11,165,165,0.06) 100%);
+  --shadow-sm: 0 1px 3px rgba(26,23,20,0.05);
+  --shadow-md: 0 4px 16px rgba(26,23,20,0.08);
+  --shadow-lg: 0 12px 40px rgba(26,23,20,0.12);
+}
+
+[data-theme="dark"] {
+  --color-bg: #111110;
+  --color-surface: #1A1918;
+  --color-surface-2: #222120;
+  --color-border: #333230;
+  --color-text: #E8E4DF;
+  --color-text-muted: #8A8580;
+  --color-text-faint: #5A5753;
+  --color-primary: #FF6B3D;
+  --color-primary-hover: #FF8A60;
+  --color-accent-violet: #9B7AFF;
+  --color-accent-cyan: #2DD4D4;
+  --color-accent-gold: #F0B84A;
+  --gradient-hero: linear-gradient(135deg, #FF6B3D 0%, #9B7AFF 50%, #2DD4D4 100%);
+  --gradient-hero-soft: linear-gradient(135deg, rgba(255,107,61,0.1) 0%, rgba(155,122,255,0.1) 50%, rgba(45,212,212,0.08) 100%);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.3);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-bg: #111110;
+    --color-surface: #1A1918;
+    --color-surface-2: #222120;
+    --color-border: #333230;
+    --color-text: #E8E4DF;
+    --color-text-muted: #8A8580;
+    --color-text-faint: #5A5753;
+    --color-primary: #FF6B3D;
+    --color-primary-hover: #FF8A60;
+    --color-accent-violet: #9B7AFF;
+    --color-accent-cyan: #2DD4D4;
+    --color-accent-gold: #F0B84A;
+    --gradient-hero: linear-gradient(135deg, #FF6B3D 0%, #9B7AFF 50%, #2DD4D4 100%);
+    --gradient-hero-soft: linear-gradient(135deg, rgba(255,107,61,0.1) 0%, rgba(155,122,255,0.1) 50%, rgba(45,212,212,0.08) 100%);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.3);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.4);
+  }
+}
+
+/* ═══════════════════ BASE ═══════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100dvh;
+  line-height: 1.6;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 { text-wrap: balance; line-height: 1.15; font-family: var(--font-display); }
+p { text-wrap: pretty; max-width: 72ch; }
+a, button { transition: color var(--transition-interactive), background var(--transition-interactive); }
+button { cursor: pointer; background: none; border: none; font: inherit; }
+
+::selection {
+  background: rgba(108, 62, 240, 0.2);
+  color: var(--color-text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-md);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ═══════════════════ HEADER ═══════════════════ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-8);
+  background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__logo {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+}
+.theme-toggle:hover { color: var(--color-text); }
+
+/* ═══════════════════ HERO ═══════════════════ */
+.hero {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-24) var(--space-8) var(--space-16);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-hero-soft);
+  z-index: 0;
+}
+
+/* Animated gradient orbs */
+.hero__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  z-index: 0;
+  animation: float 8s ease-in-out infinite;
+}
+.hero__orb--1 {
+  width: 400px; height: 400px;
+  background: var(--color-primary);
+  top: -100px; right: -50px;
+  animation-delay: 0s;
+}
+.hero__orb--2 {
+  width: 350px; height: 350px;
+  background: var(--color-accent-violet);
+  bottom: -80px; left: -50px;
+  animation-delay: -3s;
+}
+.hero__orb--3 {
+  width: 300px; height: 300px;
+  background: var(--color-accent-cyan);
+  top: 30%; left: 50%;
+  animation-delay: -5s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Photo */
+.hero__photo-wrapper {
+  position: relative;
+  width: clamp(200px, 30vw, 320px);
+  height: clamp(200px, 30vw, 320px);
+}
+
+.hero__photo-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-hero);
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.hero__photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+  border: 4px solid var(--color-bg);
+}
+
+.hero__name {
+  font-size: var(--text-hero);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__role {
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: transform var(--transition-interactive), box-shadow var(--transition-interactive);
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.tag__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.tag--cloud .tag__icon { color: var(--color-primary); }
+.tag--ai .tag__icon { color: var(--color-accent-violet); }
+.tag--dive .tag__icon { color: var(--color-accent-cyan); }
+.tag--biz .tag__icon { color: var(--color-accent-gold); }
+
+/* Scroll indicator */
+.hero__scroll {
+  margin-top: var(--space-8);
+  animation: bounce 2s ease-in-out infinite;
+  color: var(--color-text-faint);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* ═══════════════════ BIO SECTION ═══════════════════ */
+.bio {
+  padding: clamp(var(--space-12), 8vw, var(--space-24)) var(--space-8);
+  display: flex;
+  justify-content: center;
+}
+
+.bio__container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.bio__title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-8);
+  position: relative;
+  display: inline-block;
+}
+
+.bio__title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background: var(--gradient-hero);
+  border-radius: 2px;
+}
+
+.bio__text {
+  font-size: var(--text-base);
+  color: var(--color-text);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+.bio__text strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ═══════════════════ MILESTONES ═══════════════════ */
+.milestones {
+  padding: clamp(var(--space-12), 8vw, var(--space-24)) var(--space-8);
+  background: var(--color-surface-2);
+  display: flex;
+  justify-content: center;
+}
+
+.milestones__container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.milestones__title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-10);
+  text-align: center;
+}
+
+.milestones__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-6);
+}
+
+.milestone {
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-interactive), box-shadow var(--transition-interactive);
+  position: relative;
+  overflow: hidden;
+}
+
+.milestone:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.milestone::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.milestone:nth-child(1)::before { background: var(--color-primary); }
+.milestone:nth-child(2)::before { background: var(--color-accent-violet); }
+.milestone:nth-child(3)::before { background: var(--color-accent-cyan); }
+.milestone:nth-child(4)::before { background: var(--color-accent-gold); }
+
+.milestone__number {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.milestone:nth-child(1) .milestone__number { color: var(--color-primary); }
+.milestone:nth-child(2) .milestone__number { color: var(--color-accent-violet); }
+.milestone:nth-child(3) .milestone__number { color: var(--color-accent-cyan); }
+.milestone:nth-child(4) .milestone__number { color: var(--color-accent-gold); }
+
+.milestone__label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* ═══════════════════ QUOTE ═══════════════════ */
+.quote-section {
+  padding: clamp(var(--space-12), 8vw, var(--space-24)) var(--space-8);
+  display: flex;
+  justify-content: center;
+}
+
+.quote {
+  max-width: 700px;
+  text-align: center;
+  position: relative;
+}
+
+.quote__mark {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.5;
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+.quote__text {
+  font-size: var(--text-xl);
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--color-text);
+  max-width: none;
+}
+
+.quote__attribution {
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ═══════════════════ FOOTER ═══════════════════ */
+.footer {
+  padding: var(--space-8);
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+}
+
+.footer a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+.footer a:hover { color: var(--color-primary); }
+
+/* ═══════════════════ MOBILE ═══════════════════ */
+@media (max-width: 640px) {
+  .header {
+    padding: var(--space-3) var(--space-4);
+  }
+  .hero {
+    padding: var(--space-20) var(--space-4) var(--space-12);
+  }
+  .hero__photo-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+  .hero__orb { opacity: 0.2; }
+  .hero__orb--1 { width: 250px; height: 250px; }
+  .hero__orb--2 { width: 200px; height: 200px; }
+  .hero__orb--3 { width: 180px; height: 180px; }
+  .bio, .milestones, .quote-section { padding-left: var(--space-4); padding-right: var(--space-4); }
+  .milestones__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 400px) {
+  .milestones__grid { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════ SCROLL ANIMATIONS ═══════════════════ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__logo">МЛ</div>
+    <button class="theme-toggle" data-theme-toggle aria-label="Переключить тему">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
+
+    <div class="hero__content">
+      <div class="hero__photo-wrapper">
+        <div class="hero__photo-ring"></div>
+        <img class="hero__photo" src="photo.jpg" alt="Михаил Лобоцкий" width="320" height="320">
+      </div>
+
+      <h1 class="hero__name">Михаил Лобоцкий</h1>
+      <p class="hero__role">ИО Генерального директора Cloud.ru</p>
+
+      <div class="hero__tags">
+        <span class="tag tag--cloud">
+          <svg class="tag__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          Облако
+        </span>
+        <span class="tag tag--ai">
+          <svg class="tag__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v1a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3h-1v4a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-4H8a3 3 0 0 1-3-3v-1a3 3 0 0 1 3-3V6a4 4 0 0 1 4-4z"/></svg>
+          AI
+        </span>
+        <span class="tag tag--biz">
+          <svg class="tag__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Стратегия
+        </span>
+        <span class="tag tag--dive">
+          <svg class="tag__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12c2-4 6-7 10-7s8 3 10 7c-2 4-6 7-10 7s-8-3-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          Фридайвинг
+        </span>
+      </div>
+
+      <div class="hero__scroll">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio -->
+  <section class="bio">
+    <div class="bio__container">
+      <h2 class="bio__title fade-up">О себе</h2>
+
+      <p class="bio__text fade-up">
+        Руковожу <strong>Cloud.ru</strong> — ведущим российским провайдером облачных сервисов и AI-технологий. Портфель компании включает более 130 сервисов, команда насчитывает свыше 2000 специалистов, а выручка за 9 месяцев 2025 года составила 56,1 млрд рублей.
+      </p>
+
+      <p class="bio__text fade-up">
+        В компании с <strong>2019 года</strong>. Стоял у истоков разработки платформы Cloud.ru Evolution и AI-сервисов. Отвечал за работу с ключевыми клиентами, развитие гибридных и частных облаков, облачные решения для государственных проектов, включая ГосТех.
+      </p>
+
+      <p class="bio__text fade-up">
+        До Cloud.ru — <strong>14 лет в IBM</strong>, где занимался продажами, а затем прошёл путь от выстраивания блока продаж до роли CPO, создания продуктового направления и развития бизнеса.
+      </p>
+
+      <p class="bio__text fade-up">
+        Верю, что облачные и AI-технологии — ключ к цифровой трансформации российского бизнеса. Мечтаю, чтобы технологиями Cloud.ru пользовалась каждая вторая компания в России.
+      </p>
+
+      <p class="bio__text fade-up">
+        В свободное время занимаюсь <strong>фридайвингом</strong> — нырял с чемпионом мира Алексеем Молчановым в самом глубоком бассейне мира Deep Dive Dubai (60 м). Текущий рекорд задержки дыхания — 3 минуты 45 секунд. Мечтаю понырять с кашалотами.
+      </p>
+    </div>
+  </section>
+
+  <!-- Milestones -->
+  <section class="milestones">
+    <div class="milestones__container">
+      <h2 class="milestones__title fade-up">В цифрах</h2>
+      <div class="milestones__grid">
+        <div class="milestone fade-up">
+          <div class="milestone__number">130+</div>
+          <div class="milestone__label">облачных сервисов в портфеле</div>
+        </div>
+        <div class="milestone fade-up">
+          <div class="milestone__number">56,1 млрд</div>
+          <div class="milestone__label">рублей выручки за 9 мес. 2025</div>
+        </div>
+        <div class="milestone fade-up">
+          <div class="milestone__number">2000+</div>
+          <div class="milestone__label">специалистов в команде</div>
+        </div>
+        <div class="milestone fade-up">
+          <div class="milestone__number">20+ лет</div>
+          <div class="milestone__label">в технологической индустрии</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="quote-section">
+    <div class="quote fade-up">
+      <span class="quote__mark">"</span>
+      <p class="quote__text">Мы в Cloud.ru делаем будущее. Главное — помнить о своей мечте, идти к ней и развиваться.</p>
+      <p class="quote__attribution">— Михаил Лобоцкий, GoCloud 2025</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Михаил Лобоцкий &middot; <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a></p>
+  </footer>
+
+  <script>
+    // Theme toggle
+    (function(){
+      const t = document.querySelector('[data-theme-toggle]');
+      const r = document.documentElement;
+      let d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+      r.setAttribute('data-theme', d);
+      function updateIcon() {
+        t.innerHTML = d === 'dark'
+          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        t.setAttribute('aria-label', d === 'dark' ? 'Светлая тема' : 'Тёмная тема');
+      }
+      updateIcon();
+      t.addEventListener('click', function() {
+        d = d === 'dark' ? 'light' : 'dark';
+        r.setAttribute('data-theme', d);
+        updateIcon();
+      });
+    })();
+
+    // Scroll animations
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach(function(el) {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
